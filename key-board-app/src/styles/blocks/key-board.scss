@@ -1,0 +1,10 @@
+.key-board {
+  display: flex;
+  flex-wrap: wrap;
+  width: $key-board-width;
+  min-height: 378px;
+  border: 2px solid;
+  border-radius: 16px;
+  margin-bottom: 150px;
+  padding: 9px 0 0 9px;
+}
