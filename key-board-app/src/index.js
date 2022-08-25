@@ -45,6 +45,7 @@ Object.keys(keys).forEach(i => {
 })
 
 window.addEventListener('keydown', (e) => {
+  e.preventDefault()
   if (e.code !== 'CapsLock') {
     keyBoard.querySelector(`.${e.code}`).classList.add('active')
   }
