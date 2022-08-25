@@ -1,0 +1,253 @@
+.key {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background-color: $key-color;
+  border-radius: 5px;
+  margin-right: 6.6px;
+
+  &__backspace {
+    width: 98px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      stroke: white;
+      background-image: url('@/images/backspace.svg');
+      filter: invert(94%) sepia(6%) saturate(155%) hue-rotate(210deg) brightness(88%) contrast(90%);
+    }
+  }
+
+  &__tab {
+    width: 98px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 98px;
+      height: 50px;
+      background-image: url('@/images/tab.svg');
+      background-repeat: no-repeat;
+      background-position: 10px bottom;
+      filter: invert(94%) sepia(6%) saturate(155%) hue-rotate(210deg) brightness(88%) contrast(90%);
+    }
+  }
+
+  &__capslock {
+    width: 110px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 98px;
+      height: 50px;
+      background-image: url('@/images/capslock.svg');
+      background-repeat: no-repeat;
+      background-position: 10px bottom;
+      filter: invert(94%) sepia(6%) saturate(155%) hue-rotate(210deg) brightness(88%) contrast(90%);
+    }
+  }
+
+  &__enter {
+    position: relative;
+    width: 122px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      width: 36px;
+      height: 36px;
+      background-image: url('@/images/enter.svg');
+      background-repeat: no-repeat;
+      background-position: 10px bottom;
+      filter: invert(94%) sepia(6%) saturate(155%) hue-rotate(210deg) brightness(88%) contrast(90%);
+    }
+  }
+
+  &__shift-left {
+    width: 76px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 68px;
+      height: 50px;
+      background-image: url('@/images/shift.svg');
+      background-repeat: no-repeat;
+      background-position: 10px bottom;
+      filter: invert(94%) sepia(6%) saturate(155%) hue-rotate(210deg) brightness(88%) contrast(90%);
+    }
+  }
+
+  &__shift-right {
+    width: 155px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 140px;
+      height: 50px;
+      background-image: url('@/images/shift.svg');
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      filter: invert(94%) sepia(6%) saturate(155%) hue-rotate(210deg) brightness(88%) contrast(90%);
+    }
+  }
+
+  &__control {
+    position: relative;
+
+    &::before {
+      content: "control";
+      position: absolute;
+      bottom: 10px;
+      font-size: 17px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 10px;
+      top: 12px;
+      width: 13px;
+      height: 13px;
+      border: 2px solid $font-color;
+      border-bottom: transparent;
+      border-right: transparent;
+      transform: rotate(45deg);
+    }
+  }
+
+  &__option {
+    position: relative;
+
+    &::before {
+      content: "option";
+      position: absolute;
+      bottom: 10px;
+      font-size: 17px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 6px;
+      top: 6px;
+      width: 24px;
+      height: 24px;
+      background-image: url('@/images/option.svg');
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      filter: invert(94%) sepia(6%) saturate(155%) hue-rotate(210deg) brightness(88%) contrast(90%);
+    }
+
+    &-right {
+
+      &::after {
+        right: auto;
+        left: 7px;
+      }
+    }
+  }
+
+  &__command {
+    position: relative;
+    width: 80px;
+
+    &::before {
+      content: "command";
+      position: absolute;
+      bottom: 10px;
+      font-size: 17px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 6px;
+      top: 1px;
+      width: 24px;
+      height: 24px;
+      background-image: url('@/images/command.svg');
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      filter: invert(94%) sepia(6%) saturate(155%) hue-rotate(210deg) brightness(88%) contrast(90%);
+    }
+
+    &-right {
+
+      &::after {
+        right: auto;
+        left: 3px;
+      }
+    }
+  }
+
+  &__space {
+    width: 417px;
+  }
+
+  &__arrow {
+    &-bottom {
+      height: 30px;
+      margin-top: 34px;
+    }
+
+    &-up {
+      position: relative;
+      height: 30px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 8px;
+        border: 8px solid transparent;
+        border-bottom: 13px solid $font-color;
+      }
+    }
+
+    &-down {
+      position: relative;
+      height: 30px;
+      margin-top: 34px;
+      margin-left: -71px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        border: 8px solid transparent;
+        border-top: 13px solid $font-color;
+      }
+    }
+    &-left {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 6px;
+        border: 8px solid transparent;
+        border-right: 13px solid $font-color;
+      }
+    }
+
+    &-right {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 6px;
+        border: 8px solid transparent;
+        border-left: 13px solid $font-color;
+      }
+    }
+  }
+}

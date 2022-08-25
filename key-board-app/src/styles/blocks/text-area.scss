@@ -1,0 +1,11 @@
+.text-area {
+  border: 2px solid $font-color;
+  height: 300px;
+  width: $key-board-width;
+  resize: none;
+  font-family: $font-family;
+  font-size: 16px;
+  color: $key-color;
+  padding: 10px;
+
+}
