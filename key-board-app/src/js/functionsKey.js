@@ -1,6 +1,5 @@
-import keysType from "./keysType"
-import isLangChange from "./isLangChange"
-
+import keysType from './keysType'
+import isLangChange from './isLangChange'
 
 const functionsKey = {
   optionFlag: false,
@@ -10,7 +9,10 @@ const functionsKey = {
     this.capsLockFlag = !this.capsLockFlag
   },
   action(eCode, action) {
-    if (eCode === 'CapsLock' && (action === 'keydown' || action === 'keyup' || action === 'mousedown')) {
+    if (
+      eCode === 'CapsLock' &&
+      (action === 'keydown' || action === 'keyup' || action === 'mousedown')
+    ) {
       this.capsLock()
 
       if (this.capsLockFlag) {
@@ -75,7 +77,6 @@ const functionsKey = {
     }
 
     if (action === 'mousedown') {
-
       if (eCode === 'ShiftLeft' || eCode === 'ShiftRight') {
         if (this.register === 0) {
           this.register = 1
@@ -89,7 +90,6 @@ const functionsKey = {
     }
 
     if (action === 'mouseup') {
-
       if (eCode === 'ShiftLeft' || eCode === 'ShiftRight') {
         if (this.register === 1) {
           this.register = 0
@@ -101,7 +101,7 @@ const functionsKey = {
         }
       }
     }
-  }
+  },
 }
 
 export default functionsKey

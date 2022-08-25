@@ -1,4 +1,4 @@
-import keys from "./keys"
+import keys from './keys'
 
 const keysType = (register, CapsLock = false) => {
   let i = 0

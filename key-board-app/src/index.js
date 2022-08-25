@@ -1,4 +1,3 @@
-
 import keys from '@/js/keys'
 import '@/styles/index.scss'
 import keyClassAdd from '@/js/keyClassAdd'
@@ -12,25 +11,24 @@ let content = ''
 const keyBoard = document.createElement('div')
 keyBoard.classList.add('key-board')
 
-Object.keys(keys).forEach(i => {
-  const letter = document.createElement('div');
+Object.keys(keys).forEach((i) => {
+  const letter = document.createElement('div')
   letter.classList.add('key', i, ...keyClassAdd(i))
 
   letter.textContent = keys[i][0]
 
   letter.addEventListener('mousedown', () => {
-    //по нажатию подсвечиваем
     if (i !== 'CapsLock') {
       letter.classList.add('active')
     }
-    //добавляем символ или удаляем его
+
     content += letter.textContent
     if (i === 'Backspace') {
       content = content.slice(0, content.length - 1)
     }
 
     textArea.textContent = content
-    // делаю заглавные буквы
+
     functionsKey.action(i, 'mousedown')
   })
 
@@ -38,7 +36,7 @@ Object.keys(keys).forEach(i => {
     if (i !== 'CapsLock') {
       letter.classList.remove('active')
     }
-    //делаю прописными
+
     functionsKey.action(i, 'mouseup')
   })
   keyBoard.append(letter)
@@ -55,9 +53,8 @@ window.addEventListener('keydown', (e) => {
   }
 
   textArea.textContent = content
-  //
-  functionsKey.action(e.code, 'keydown')
 
+  functionsKey.action(e.code, 'keydown')
 })
 
 window.addEventListener('keyup', (e) => {

@@ -1,5 +1,5 @@
 const keyClassAdd = (element) => {
-  const keyKind = [];
+  const keyKind = []
   if (element === 'Backspace') {
     keyKind.push('key__backspace', 'font-size-zero')
   }
@@ -28,7 +28,12 @@ const keyClassAdd = (element) => {
   if (element === 'Space') {
     keyKind.push('key__space', 'font-size-zero')
   }
-  if (element === 'ArrowRight' || element === 'ArrowLeft' || element === 'ArrowUp' || element === 'ArrowDown') {
+  if (
+    element === 'ArrowRight' ||
+    element === 'ArrowLeft' ||
+    element === 'ArrowUp' ||
+    element === 'ArrowDown'
+  ) {
     keyKind.push('font-size-zero')
     if (element === 'ArrowRight') {
       keyKind.push('key__arrow-bottom', 'key__arrow-right')
