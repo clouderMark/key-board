@@ -54,16 +54,16 @@ const keys = {
   'Period': ['.', '>', 'ю', 'Ю'],
   'Slash': ['/', '?', '/', '?'],
   'ShiftRight': ['', '', '', ''],
-  'ControlLeft': ['control', 'control', 'control', 'control'],
+  'ControlLeft': ['', '', '', ''],
   'AltLeft': ['', '', '', ''],
-  'MetaLeft': ['command', 'command', 'command', 'command'],
+  'MetaLeft': ['', '', '', ''],
   'Space': [' ', ' ', ' ', ' '],
-  'MetaRight': ['command', 'command', 'command', 'command'],
-  'AltRight': ['option', 'option', 'option', 'option'],
-  'ArrowLeft': ['left', 'left', 'left', 'left'],
-  'ArrowUp': ['up', 'up', 'up', 'up'],
-  'ArrowDown': ['down', 'down', 'down', 'up'],
-  'ArrowRight': ['right', 'right', 'right', 'up']
+  'MetaRight': ['', '', '', ''],
+  'AltRight': ['', '', '', ''],
+  'ArrowLeft': ['\u21E6', '\u21E6', '\u21E6', '\u21E6'],
+  'ArrowUp': ['\u21E7', '\u21E7', '\u21E7', '\u21E7'],
+  'ArrowDown': ['\u21E9', '\u21E9', '\u21E9', '\u21E9'],
+  'ArrowRight': ['\u21E8', '\u21E8', '\u21E8', '\u21E8']
 }
 
 export default keys
