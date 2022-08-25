@@ -1,8 +1,8 @@
 import keysType from './keysType'
+import setTimer from './setTimer'
 import isLangChange from './isLangChange'
 
 const functionsKey = {
-  optionFlag: false,
   register: 0,
   capsLockFlag: false,
   capsLock() {
@@ -48,16 +48,10 @@ const functionsKey = {
           keysType(this.register)
         }
       }
-      if (eCode === 'AltLeft' || eCode === 'AltRight') {
-        this.optionFlag = true
-      }
-      if (this.optionFlag && eCode === 'Space' && this.register !== 2) {
-        this.register = 2
-        keysType(this.register)
-      }
-      if (this.optionFlag && eCode === 'Space' && this.register === 2 && isLangChange()) {
-        this.register = 0
-        keysType(this.register)
+     
+
+      if ((eCode === 'AltLeft' || eCode === 'AltRight') && setTimer()) {
+        this.register = isLangChange()
       }
     }
 
@@ -71,9 +65,6 @@ const functionsKey = {
           keysType(this.register)
         }
       }
-      if (eCode === 'AltLeft' || eCode === 'AltRight') {
-        this.optionFlag = false
-      }
     }
 
     if (action === 'mousedown') {
@@ -86,6 +77,9 @@ const functionsKey = {
           this.register = 3
           keysType(this.register)
         }
+      }
+      if ((eCode === 'AltLeft' || eCode === 'AltRight') && setTimer()) {
+        this.register = isLangChange()
       }
     }
 

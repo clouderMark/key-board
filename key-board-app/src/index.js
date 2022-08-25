@@ -5,6 +5,7 @@ import functionsKey from '@/js/functionsKey'
 
 const textArea = document.createElement('textarea')
 textArea.classList.add('text-area')
+textArea.placeholder = 'для смены языка кликните option  трижды'
 
 let content = ''
 
